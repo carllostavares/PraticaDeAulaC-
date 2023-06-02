@@ -1,0 +1,15 @@
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\bin\Debug\net6.0\App_musica_C#.exe
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\bin\Debug\net6.0\App_musica_C#.deps.json
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\bin\Debug\net6.0\App_musica_C#.runtimeconfig.json
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\bin\Debug\net6.0\App_musica_C#.dll
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\bin\Debug\net6.0\App_musica_C#.pdb
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\obj\Debug\net6.0\App_musica_C#.csproj.AssemblyReference.cache
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\obj\Debug\net6.0\App_musica_C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\obj\Debug\net6.0\App_musica_C#.AssemblyInfoInputs.cache
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\obj\Debug\net6.0\App_musica_C#.AssemblyInfo.cs
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\obj\Debug\net6.0\App_musica_C#.csproj.CoreCompileInputs.cache
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\obj\Debug\net6.0\App_musica_C#.dll
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\obj\Debug\net6.0\refint\App_musica_C#.dll
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\obj\Debug\net6.0\App_musica_C#.pdb
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\obj\Debug\net6.0\App_musica_C#.genruntimeconfig.cache
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\App_musica_C#\App_musica_C#\obj\Debug\net6.0\ref\App_musica_C#.dll
