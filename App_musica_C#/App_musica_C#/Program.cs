@@ -1,15 +1,15 @@
-﻿Musica musica1 = new Musica();
-musica1.Nome = "Carlos";
-musica1.Artista = "Vocal";
-musica1.Duracao = 273;
-musica1.Disponivel = true;
-Console.WriteLine(musica1.DescricaoResumida);
+﻿Album albumDoQueem = new Album();
+albumDoQueem.Nome = "A night at the opera";
+
+Musica musica1 = new Musica();
+musica1.Nome = "Love of my life";
+musica1.Duracao = 213;
 
 Musica musica2 = new Musica();
-musica2.Nome = "Priscila";
-musica2.Artista = "Amada";
-musica2.Duracao = 173;
-musica2.Disponivel = false;
+musica2.Nome = "Bohemian Rhapsody";
+musica2.Duracao = 354;
 
-musica1.ExibirFichaTecnica();
-musica2.ExibirFichaTecnica();
+albumDoQueem.AdicionarMusica(musica1);
+albumDoQueem.AdicionarMusica(musica2);
+
+albumDoQueem.ExibirAlbum();
