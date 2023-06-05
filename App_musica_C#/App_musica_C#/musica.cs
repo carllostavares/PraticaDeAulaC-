@@ -1,9 +1,16 @@
 ﻿class Musica
 {
     public string Nome { get; set; }
-    public string artista { get; set; }
-    public int duracao { get; set; }
+
+    public string Artista { get; set; }
+
+    public int Duracao { get; set; }
+
     public bool Disponivel{get; set;}
+
+    public string DescricaoResumida => $"A musica{Nome} pertence a {Artista}";
+
+
 
     public void ExibirFichaTecnica()
 
@@ -11,7 +18,7 @@
         Console.WriteLine($"Nome: {Nome}");
         Console.WriteLine($"Artista: {Artista}");
         Console.WriteLine($"Duração: {Duracao}");
-        if (disponível)
+        if (Disponivel)
         {
             Console.WriteLine("Disponível para plano!");
         }else
@@ -19,7 +26,5 @@
             Console.WriteLine("Não disponível para plano!");
         }
     }
-
-
 
 } 
