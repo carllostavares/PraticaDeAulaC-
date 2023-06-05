@@ -8,6 +8,8 @@
 
     public bool Disponivel{get; set;}
 
+    public Genero Genero {get; set;}
+
     public string DescricaoResumida => $"A musica{Nome} pertence a {Artista}";
 
 

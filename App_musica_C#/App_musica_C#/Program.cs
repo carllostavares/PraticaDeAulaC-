@@ -12,4 +12,8 @@ musica2.Duracao = 354;
 albumDoQueem.AdicionarMusica(musica1);
 albumDoQueem.AdicionarMusica(musica2);
 
-albumDoQueem.ExibirAlbum();
+Banda queem = new Banda();
+queem.Nome = "Queem";
+
+queem.AdicionaAlbum(albumDoQueem);
+queem.ExibirDicografia();
