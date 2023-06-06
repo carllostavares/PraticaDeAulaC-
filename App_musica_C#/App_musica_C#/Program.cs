@@ -1,26 +1,7 @@
-﻿Banda queem = new Banda("Queem");
+﻿
+Episodio ep1 = new Episodio(1, "Senhor do Aneis", 354);
+ep1.AdicionaConvidados("Carlos");
+ep1.AdicionaConvidados("Leia");
+ep1.AdicionaConvidados("Priscila");
 
-Album albumDoQueem = new Album("A night at the opera");
-
-Musica musica1 = new Musica(queem, "Love of my life")
-{
-    Duracao = 213,
-    Disponivel = true,
-};
-
-
-Musica musica2 = new Musica(queem, "Bohemian Rhapsody")
-{
-    Duracao = 354,
-    Disponivel = false,
-}; 
-
-
-albumDoQueem.AdicionarMusica(musica1);
-albumDoQueem.AdicionarMusica(musica2);
-queem.AdicionaAlbum(albumDoQueem);
-
-musica1.ExibirFichaTecnica();
-musica2.ExibirFichaTecnica();
-albumDoQueem.ExibirAlbum();
-queem.ExibirDicografia();
+Console.WriteLine(ep1.Resumo);
