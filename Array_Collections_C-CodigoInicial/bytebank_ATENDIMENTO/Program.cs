@@ -26,11 +26,33 @@ void TestaArrayInt()
 
 }
 
+void TestandoPalavra()
+{
+    string[] arrayDePalavra = new string[5];
 
-int[,] numeros = new int[3,6];
+    for (int i = 0;i < arrayDePalavra.Length;i++)
+    {
+        Console.WriteLine($"Digite a palavra de número {i + 1}");
+        arrayDePalavra[i] = Console.ReadLine();
+    }
 
-numeros[0,1] = 9 ;
-numeros[0,2] = 10;
-numeros[0,3] = 8;
+Console.WriteLine("Digite a palavra que deseja pesquisar:");
+string busca = Console.ReadLine(); 
 
-Console.WriteLine($"{numeros[0,1]}, {numeros[0, 2]}, {numeros[0, 3]}");
+foreach(string palavra in arrayDePalavra)
+    {
+        if(palavra.Equals(busca))
+        {
+            Console.WriteLine($"Palavra {busca} foi encontrada !");
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Palavra não encontrada !");
+        }
+    }
+
+
+ }
+
+ TestandoPalavra();
