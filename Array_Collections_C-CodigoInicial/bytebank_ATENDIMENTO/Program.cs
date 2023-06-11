@@ -1,6 +1,8 @@
-﻿Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
+﻿using System.Linq.Expressions;
 
-TestaArrayInt();
+Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
+
+/*TestaArrayInt();
 
 void TestaArrayInt()
 {
@@ -24,7 +26,7 @@ void TestaArrayInt()
     int media = acumulador / idades.Length;
     Console.WriteLine($"Média de idades = {media}");
 
-}
+}*/
 
 void TestandoPalavra()
 {
@@ -37,22 +39,31 @@ void TestandoPalavra()
     }
 
 Console.WriteLine("Digite a palavra que deseja pesquisar:");
-string busca = Console.ReadLine(); 
+string busca = Console.ReadLine();
 
-foreach(string palavra in arrayDePalavra)
+    bool acertou = false;
+    foreach (string palavra in arrayDePalavra)
     {
+        
         if(palavra.Equals(busca))
         {
-            Console.WriteLine($"Palavra {busca} foi encontrada !");
-            break;
-        }
-        else
-        {
-            Console.WriteLine("Palavra não encontrada !");
+            acertou = true;
         }
     }
 
+    switch (acertou)
+    {
+        case true:
+            Console.WriteLine($"Palavra {busca} foi encontrada !");
+            break;
+        case false:
+            Console.WriteLine($"Palavra {busca} não encontrada !");
+            break;
+        default:
+            break;
+    }
 
- }
+
+}
 
  TestandoPalavra();
