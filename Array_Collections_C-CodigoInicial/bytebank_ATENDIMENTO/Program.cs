@@ -1,8 +1,11 @@
-﻿using System.Linq.Expressions;
+﻿
+using bytebank.Modelos.Conta;
+using bytebank_ATENDIMENTO.bytebank.Util;
 
 Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
 
-/*TestaArrayInt();
+//TestaArrayInt();
+//TestaBuscarPalavra();
 
 void TestaArrayInt()
 {
@@ -25,45 +28,69 @@ void TestaArrayInt()
 
     int media = acumulador / idades.Length;
     Console.WriteLine($"Média de idades = {media}");
+}
 
-}*/
-
-void TestandoPalavra()
+void TestaBuscarPalavra()
 {
-    string[] arrayDePalavra = new string[5];
+    string[] arrayDePalavras = new string[5];
 
-    for (int i = 0;i < arrayDePalavra.Length;i++)
+    for (int i = 0; i < arrayDePalavras.Length; i++)
     {
-        Console.WriteLine($"Digite a palavra de número {i + 1}");
-        arrayDePalavra[i] = Console.ReadLine();
+        Console.Write($"Digite {i + 1}ª Palavra: ");
+        arrayDePalavras[i] = Console.ReadLine();
     }
 
-Console.WriteLine("Digite a palavra que deseja pesquisar:");
-string busca = Console.ReadLine();
+    Console.Write("Digite palavara a ser encontrada: ");
+    var busca = Console.ReadLine();
 
-    bool acertou = false;
-    foreach (string palavra in arrayDePalavra)
+    foreach (string palavra in arrayDePalavras)
     {
-        
-        if(palavra.Equals(busca))
+        if (palavra.Equals(busca))
         {
-            acertou = true;
+            Console.WriteLine($"Palavra encontrada = {busca}.");
+            break;
         }
     }
 
-    switch (acertou)
-    {
-        case true:
-            Console.WriteLine($"Palavra {busca} foi encontrada !");
-            break;
-        case false:
-            Console.WriteLine($"Palavra {busca} não encontrada !");
-            break;
-        default:
-            break;
-    }
-
-
 }
 
- TestandoPalavra();
+Array amostra = new double[5];
+amostra.SetValue(5.9, 0);
+amostra.SetValue(1.8, 1);
+amostra.SetValue(7.1, 2);
+amostra.SetValue(10, 3);
+amostra.SetValue(6.9, 4);
+
+//[5,9][1,8][7,1][10][6,9]
+//TestaMediana(amostra);
+
+void TestaMediana(Array array)
+{
+    if ((array == null) || (array.Length == 0))
+    {
+        Console.WriteLine("Array para cálculo da mediana está vazio ou nulo.");
+    }
+
+    double[] numerosOrdenados = (double[])array.Clone();
+    Array.Sort(numerosOrdenados);
+    //[1,8][5,9][6,9][7,1][10]
+
+    int tamanho = numerosOrdenados.Length;
+    int meio = tamanho / 2;
+    double mediana = (tamanho % 2 != 0) ? numerosOrdenados[meio] :
+                                   (numerosOrdenados[meio] + numerosOrdenados[meio - 1]) / 2;
+    Console.WriteLine($"Com base na amostra a mediana = {mediana}");
+}
+
+// código anterior omitido
+
+void TestaArrayDeContasCorrentes()
+{
+    listaDeContaCorrente listaDeContas = new listaDeContaCorrente();
+    listaDeContas.Adicionar(new ContaCorrente(874, "5679787-A"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "4456668-B"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
+    
+}
+
+TestaArrayDeContasCorrentes();
