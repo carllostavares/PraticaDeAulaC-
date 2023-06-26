@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ByteBank.Funcionários
 {
-    public class Funcionario
+    internal class Diretor
     {
         public string Nome { get; set; }
 
@@ -17,7 +16,7 @@ namespace ByteBank.Funcionários
 
         public double GetBonificacao()
         {
-            return this.Salario * 0.10;
+            return this.Salario;
         }
     }
 }
