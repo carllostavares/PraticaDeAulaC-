@@ -1,5 +1,6 @@
 ﻿
 using ByteBank.Funcionários;
+using bytebank_ADM.Utilitario;
 
 Funcionario pedro = new Funcionario();
 
@@ -18,3 +19,9 @@ Carlos.Salario = 9000;
 
 Console.WriteLine(Carlos.Nome);
 Console.WriteLine(Carlos.GetBonificacao());
+
+GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+gerenciador.Registrar(pedro);
+gerenciador.Registrar(Carlos);
+
+Console.WriteLine($"O total de bonificação é {gerenciador.TotalDeBonificacao}");
