@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank.Funcionários
+namespace CalculadoraBasica.Adicionar
 {
-    public class Diretor:Funcionario
+    public class Soma
     {
-        public override double GetBonificacao()
+       public double Somar(double Num1, double Num2)
         {
-            return this.Salario;
+            return Num1 * Num2;
         }
     }
 }
