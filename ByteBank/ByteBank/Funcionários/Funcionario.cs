@@ -14,6 +14,8 @@ namespace ByteBank.Funcionários
         public string Cpf { get; set; }
 
         public double Salario { get; set; }
+        
+        public static int TotalDeFuncionarios { get; private set; }
 
         public virtual double GetBonificacao()
         {
@@ -21,3 +23,6 @@ namespace ByteBank.Funcionários
         }
     }
 }
+
+
+
