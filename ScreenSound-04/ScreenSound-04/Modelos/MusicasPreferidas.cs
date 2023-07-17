@@ -41,7 +41,19 @@ namespace ScreenSound_04.Modelos
             Console.WriteLine("O arquivo json foi criado com sucesso !");
         }
 
- 
+        public void GerarDocumentoTXTComAsMusicasFavoritas()
+        {
+            string nomeDoArquivo = $"musicas-favoritas-{Nome}.txt";
+            using (StreamWriter arquivo = new StreamWriter(nomeDoArquivo))
+            {
+                arquivo.WriteLine($"Músicas favoritas do {Nome}\n");
+                foreach (var musicas in ListaDeMusicasFavoritas)
+                {
+                    arquivo.WriteLine($"- {musicas}");
+                }
+            }
+            Console.WriteLine("txt gerado com sucesso!");
+        }
 
     }
 }
