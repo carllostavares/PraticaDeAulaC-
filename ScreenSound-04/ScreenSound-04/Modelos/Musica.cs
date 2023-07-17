@@ -1,6 +1,5 @@
 ﻿
 using System.Text.Json.Serialization;
-
 namespace ScreenSound_04.Modelos;
 
 internal class Musica

@@ -1,5 +1,4 @@
 ﻿using ScreenSound_04.Modelos;
-
 namespace ScreenSound_04.Filtro;
 
 internal class LinqFilter
