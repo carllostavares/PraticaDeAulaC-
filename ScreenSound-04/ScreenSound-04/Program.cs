@@ -23,6 +23,10 @@ using (HttpClient client = new HttpClient())
 
         musicasPreferidasDoDaniel.ExibirMusicasFavoritas();
 
+        musicasPreferidasDoDaniel.GerarArquivoJson();
+
+
+
     }
     catch (Exception ex) 
     {

@@ -36,6 +36,12 @@ namespace ScreenSound_04.Modelos
                 nome = Nome,
                 musica = ListaDeMusicasFavoritas
             });
+            string nomeDoArquivo = $"musicas-favoritas-{Nome}.json";
+            File.WriteAllText(nomeDoArquivo, json);
+            Console.WriteLine("O arquivo json foi criado com sucesso !");
         }
+
+ 
+
     }
 }
