@@ -34,6 +34,7 @@ internal class LinqFilter
         foreach(var musica in musicasDoArtista)
         {
             Console.WriteLine($"- {musica.Nome}");
+            Console.WriteLine($"- {musica.Nome}");
         }
     }
 }

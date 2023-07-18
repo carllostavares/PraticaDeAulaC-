@@ -10,30 +10,32 @@ using (HttpClient client = new HttpClient())
 
         var musica = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
 
+        musica[1].ExibirDetalhesDaMusica();
+
         //LinqFilter.FiltrarTodosOsGenerosMusicais(musica);
         //LinqOrder.ExibirListaDeArtistasOrdenados(musica);
         //LinqFilter.FiltrarPorGeneroMusical(musica,"rock");
         //LinqFilter.FiltrarMusicaDeUmArtista(musica, "Hinder");
 
-        var musicasPreferidasDoDaniel = new MusicasPreferidas("Daniel");
-        musicasPreferidasDoDaniel.AdicionarMusicaFavorita(musica[2]);
-        musicasPreferidasDoDaniel.AdicionarMusicaFavorita(musica[6]);
-        musicasPreferidasDoDaniel.AdicionarMusicaFavorita(musica[20]);
-        musicasPreferidasDoDaniel.AdicionarMusicaFavorita(musica[12]);
+        //var musicasPreferidasDoDaniel = new MusicasPreferidas("Daniel");
+        //musicasPreferidasDoDaniel.AdicionarMusicaFavorita(musica[2]);
+        //musicasPreferidasDoDaniel.AdicionarMusicaFavorita(musica[6]);
+        //musicasPreferidasDoDaniel.AdicionarMusicaFavorita(musica[20]);
+        //musicasPreferidasDoDaniel.AdicionarMusicaFavorita(musica[12]);
 
-        musicasPreferidasDoDaniel.ExibirMusicasFavoritas();
+        //musicasPreferidasDoDaniel.ExibirMusicasFavoritas();
 
         //musicasPreferidasDoDaniel.GerarArquivoJson();
 
 
-        var musicasFavoritasDoGuilherme = new MusicasPreferidas("Guilherme");
-        musicasFavoritasDoGuilherme.AdicionarMusicaFavorita(musica[980]);
-        musicasFavoritasDoGuilherme.AdicionarMusicaFavorita(musica[513]);
-        musicasFavoritasDoGuilherme.AdicionarMusicaFavorita(musica[1024]);
-        musicasFavoritasDoGuilherme.AdicionarMusicaFavorita(musica[999]);
-        musicasFavoritasDoGuilherme.AdicionarMusicaFavorita(musica[37]);
+        //var musicasFavoritasDoGuilherme = new MusicasPreferidas("Guilherme");
+        //musicasFavoritasDoGuilherme.AdicionarMusicaFavorita(musica[980]);
+        //musicasFavoritasDoGuilherme.AdicionarMusicaFavorita(musica[513]);
+        //musicasFavoritasDoGuilherme.AdicionarMusicaFavorita(musica[1024]);
+        //musicasFavoritasDoGuilherme.AdicionarMusicaFavorita(musica[999]);
+        //musicasFavoritasDoGuilherme.AdicionarMusicaFavorita(musica[37]);
 
-        musicasFavoritasDoGuilherme.GerarDocumentoTXTComAsMusicasFavoritas();
+        //musicasFavoritasDoGuilherme.GerarDocumentoTXTComAsMusicasFavoritas();
 
     }
     catch (Exception ex) 

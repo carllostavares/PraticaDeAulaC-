@@ -31,6 +31,7 @@ namespace ScreenSound_04.Modelos
         public void GerarArquivoJson()
         {
             //aqui estou criando um objeto anonimo
+            //aqui estou criando um objeto anonimo
             string json = JsonSerializer.Serialize(new
             {
                 nome = Nome,
