@@ -1,4 +1,6 @@
 ﻿using ScreenSound_04.Modelos;
+using System.Security.Cryptography.X509Certificates;
+
 namespace ScreenSound_04.Filtro;
 
 internal class LinqFilter
@@ -36,5 +38,19 @@ internal class LinqFilter
             Console.WriteLine($"- {musica.Nome}");
             Console.WriteLine($"- {musica.Nome}");
         }
+
+ 
+    }
+
+    internal static void FiltrarMusicaEmCSharp(List<Musica> musicas)
+    {
+        var musicaEmCSharp = musicas.Where(musica => musica.Tonalidade.Equals("C#")).ToList();
+
+        foreach (var musica in musicaEmCSharp)
+        {
+            Console.WriteLine($"{musica.Nome} ");
+            Console.WriteLine($"{musica.Tonalidade}");
+        }
     }
 }
+
