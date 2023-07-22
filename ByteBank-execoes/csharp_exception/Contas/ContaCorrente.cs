@@ -47,19 +47,22 @@ namespace csharp_exception.Contas
             }
             else
             {
-                throw new SaldoInsuficienteException("Saldo insuficiente !");
+                return false;
             }
         }
-        public void Transferir(double valor, ContaCorrente contaDestino)
+
+        public bool Transferir(double valor, ContaCorrente destino)
         {
-            if (valor < 0)
+            if (saldo < valor)
             {
-                throw new ArgumentException("Valor inválido para a transferência.", nameof(valor));
+                return false;
             }
-
-            Sacar(valor);
-
-            contaDestino.Depositar(valor);
+            else
+            {
+                Sacar(valor);
+                destino.Depositar(valor);
+                return true;
+            }
         }
 
         public void SetSaldo(double valor)
@@ -84,21 +87,21 @@ namespace csharp_exception.Contas
             Numero_agencia = numero_agencia;
             Conta = numero_conta;
 
-            if (Numero_agencia <= 0)
+            if (numero_agencia <= 0)
             {
                 throw new ArgumentException("Número de agência menor ou igual a zero!", nameof(numero_agencia));
             }
 
-            
+            /*
             try
             {
-                TaxaOperacao = 1 / TotalDeContasCriadas;
+                TaxaOperacao = 30 / TotalDeContasCriadas;
             }
             catch (DivideByZeroException)
             {
                 Console.WriteLine("Ocorreu um erro! Não é possível fazer uma divisão por zero!");
-            }         
-            
+            }          
+            */
             TotalDeContasCriadas++;
         }
 
