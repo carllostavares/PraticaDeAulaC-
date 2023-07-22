@@ -47,22 +47,19 @@ namespace csharp_exception.Contas
             }
             else
             {
-                return false;
+                throw new SaldoInsuficienteException("Saldo insuficiente !");
             }
         }
-
-        public bool Transferir(double valor, ContaCorrente destino)
+        public void Transferir(double valor, ContaCorrente contaDestino)
         {
-            if (saldo < valor)
+            if (valor < 0)
             {
-                return false;
+                throw new ArgumentException("Valor inválido para a transferência.", nameof(valor));
             }
-            else
-            {
-                Sacar(valor);
-                destino.Depositar(valor);
-                return true;
-            }
+
+            Sacar(valor);
+
+            contaDestino.Depositar(valor);
         }
 
         public void SetSaldo(double valor)
@@ -87,7 +84,7 @@ namespace csharp_exception.Contas
             Numero_agencia = numero_agencia;
             Conta = numero_conta;
 
-            if (numero_agencia <= 0)
+            if (Numero_agencia <= 0)
             {
                 throw new ArgumentException("Número de agência menor ou igual a zero!", nameof(numero_agencia));
             }

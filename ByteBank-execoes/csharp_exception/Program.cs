@@ -1,11 +1,15 @@
 ﻿using csharp_exception.Titular;
 using csharp_exception.Contas;
-
+using csharp_exception;
 
 try
 {
     ContaCorrente conta1 = new ContaCorrente(283, "1234-X");
-    Console.WriteLine(ContaCorrente.TaxaOperacao);
+    conta1.Sacar(50);
+    Console.WriteLine(conta1.GetSaldo());
+
+    conta1.Sacar(50);
+    Console.WriteLine(conta1.GetSaldo());
 
 }
 catch(ArgumentException ex)
@@ -15,4 +19,8 @@ catch(ArgumentException ex)
     Console.WriteLine(ex.Message);
     
 }
-
+catch(SaldoInsuficienteException ex)
+{
+    Console.WriteLine("Operação negada! Saldo Insufuciente!");
+    Console.WriteLine(ex.Message);
+}
