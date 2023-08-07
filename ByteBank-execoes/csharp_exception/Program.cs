@@ -2,8 +2,18 @@
 using csharp_exception.Contas;
 using csharp_exception;
 
-LeitorDeArquivo leitor = new LeitorDeArquivo("contasa.txt");
-leitor.LerProximaLinha();
+
+
+try
+{
+    LeitorDeArquivo leitor = new LeitorDeArquivo("contasa.txt");
+    leitor.LerProximaLinha();
+    leitor.LerProximaLinha();
+}
+catch(IOException)
+{
+    Console.WriteLine("Leitura de arquivo interrompida !");
+}
 
 //try
 //{
